@@ -1,0 +1,11 @@
+C:\Users\tetri\OneDrive\Escritorio\documentos\Optimizador\optimizer_updater\optimizer_updater\bin\Debug\optimizer_updater.exe.config
+C:\Users\tetri\OneDrive\Escritorio\documentos\Optimizador\optimizer_updater\optimizer_updater\bin\Debug\optimizer_updater.exe
+C:\Users\tetri\OneDrive\Escritorio\documentos\Optimizador\optimizer_updater\optimizer_updater\bin\Debug\optimizer_updater.pdb
+C:\Users\tetri\OneDrive\Escritorio\documentos\Optimizador\optimizer_updater\optimizer_updater\obj\Debug\optimizer_updater.csproj.AssemblyReference.cache
+C:\Users\tetri\OneDrive\Escritorio\documentos\Optimizador\optimizer_updater\optimizer_updater\obj\Debug\optimizer_updater.csproj.SuggestedBindingRedirects.cache
+C:\Users\tetri\OneDrive\Escritorio\documentos\Optimizador\optimizer_updater\optimizer_updater\obj\Debug\optimizer_updater.optimizer_updater.resources
+C:\Users\tetri\OneDrive\Escritorio\documentos\Optimizador\optimizer_updater\optimizer_updater\obj\Debug\optimizer_updater.Properties.Resources.resources
+C:\Users\tetri\OneDrive\Escritorio\documentos\Optimizador\optimizer_updater\optimizer_updater\obj\Debug\optimizer_updater.csproj.GenerateResource.cache
+C:\Users\tetri\OneDrive\Escritorio\documentos\Optimizador\optimizer_updater\optimizer_updater\obj\Debug\optimizer_updater.csproj.CoreCompileInputs.cache
+C:\Users\tetri\OneDrive\Escritorio\documentos\Optimizador\optimizer_updater\optimizer_updater\obj\Debug\optimizer_updater.exe
+C:\Users\tetri\OneDrive\Escritorio\documentos\Optimizador\optimizer_updater\optimizer_updater\obj\Debug\optimizer_updater.pdb
