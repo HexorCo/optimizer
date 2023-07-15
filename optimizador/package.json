@@ -1,0 +1,83 @@
+{
+  "name": "optimizer",
+  "productName": "optimizer",
+  "version": "0.0.2",
+  "description": "My Electron application description",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\"",
+    "exotic-debug": "npm install electron-builder --dev",
+    "build-installer": "electron-builder"
+  },
+  "build": {
+    "appId": "optimizer",
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "requestedExecutionLevel": "requireAdministrator"
+    },
+    "extraFiles": [
+      {
+        "from": "./build/programs",
+        "to": "./"
+      }
+    ],
+    "nsis": {
+      "installerIcon": "src/logo.ico",
+      "uninstallerIcon": "src/logo.ico",
+      "uninstallDisplayName": "optimizer",
+      "license": "src/license.txt",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": false
+    }
+  },
+  "keywords": [],
+  "author": "Titanc",
+  "license": "MIT",
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "cool_app"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "download": "^8.0.0",
+    "electron-squirrel-startup": "^1.0.0",
+    "latest-version": "^6.0.0",
+    "progressbar.js": "^1.1.0"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.63",
+    "@electron-forge/maker-deb": "^6.0.0-beta.63",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.63",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.63",
+    "@electron-forge/maker-zip": "^6.0.0-beta.63",
+    "electron": "^17.0.0"
+  }
+}

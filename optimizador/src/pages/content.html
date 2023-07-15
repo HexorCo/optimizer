@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Optimizer</title>
+  <link rel="stylesheet" href="../css/fontawesome.css">
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+<body >
+
+  <section id="navbar">
+    <h1>Window Optimizer - v1 </h1>
+    <i id="close-btn" class="fal fa-times"></i>
+  </section>
+  
+  <section id="content">
+    <div class="optimizer-back">
+      <i style="left: calc(100% / 2 - 80px);" class="fad fa-dumpster-fire"></i>
+      <div class="optimizer-cont">
+        <h1>Cleaner</h1>
+        <p>Delete files, uninstall programs, scan for threats, update."</p>
+        <button id="btn-cleaner">Cleaner</button>
+      </div>
+    </div>
+    <div class="optimizer-back inner1">
+      <i style="left: calc(100% / 2 - 75px);" class="fad fa-window"></i>
+      <div class="optimizer-cont">
+        <h1>Window</h1>
+        <p>Optimize your Window improve performance, free up space, speed up.</p>
+        <button id="btn-opt">Optimizer</button>
+      </div>
+    </div>
+    <div class="optimizer-back">
+      <i style="left: calc(100% / 2 - 50px);" class="fad fa-brush"></i>
+      <div class="optimizer-cont">
+        <h1>Graphic</h1>
+        <p>Improve performance, update drivers, adjust settings.</p>
+        <button id="btn-graphic">Graphic</button>
+      </div>
+    </div>
+  </section>
+  
+  <script>
+        const electron = require('electron');
+        const ipcRenderer = electron.ipcRenderer;
+        document.getElementById('close-btn').addEventListener('click', e=>{
+          ipcRenderer.send("event:window","close")
+        })
+        document.getElementById('btn-cleaner').addEventListener('click', e=>{
+          
+          if(document.getElementById('btn-cleaner').innerHTML == "Cleaner"){
+            ipcRenderer.send("event:optimizer","cleaner")
+
+            document.getElementById('btn-cleaner').innerHTML = 0;
+            setInterval(() => {
+              if(parseInt(document.getElementById('btn-cleaner').innerHTML) < 101){
+                document.getElementById('btn-cleaner').innerHTML = (parseInt(document.getElementById('btn-cleaner').innerHTML) + 1)+"%";
+              }else{
+                document.getElementById('btn-cleaner').innerHTML = "Cleaner";
+              }
+            }, 100);
+          }
+
+        })
+        document.getElementById('btn-opt').addEventListener('click', e=>{
+
+          if(document.getElementById('btn-opt').innerHTML == "Optimizer"){
+            ipcRenderer.send("event:optimizer","optimizer")
+
+            document.getElementById('btn-opt').innerHTML = 0;
+            setInterval(() => {
+              if(parseInt(document.getElementById('btn-opt').innerHTML) < 101){
+                document.getElementById('btn-opt').innerHTML = (parseInt(document.getElementById('btn-opt').innerHTML) + 1)+"%";
+              }else{
+                document.getElementById('btn-opt').innerHTML = "Optimizer";
+              }
+            }, 100);
+
+
+          }
+
+
+        })
+        document.getElementById('btn-graphic').addEventListener('click', e=>{
+
+          if(document.getElementById('btn-graphic').innerHTML == "Graphic"){
+
+            ipcRenderer.send("event:optimizer","graphic")
+            document.getElementById('btn-graphic').innerHTML = 0;
+            setInterval(() => {
+              if(parseInt(document.getElementById('btn-graphic').innerHTML) < 101){
+                document.getElementById('btn-graphic').innerHTML = (parseInt(document.getElementById('btn-graphic').innerHTML) + 1)+"%";
+              }else{
+                document.getElementById('btn-graphic').innerHTML = "Graphic";
+              }
+            }, 100);
+
+          }
+
+
+
+        })
+          var input = document.querySelector("body");
+          input.addEventListener("keyup", function(event) {
+          if (event.keyCode === 116) {
+          location.reload(true);
+        }
+        });
+
+  </script>
+</body>
+</html>
