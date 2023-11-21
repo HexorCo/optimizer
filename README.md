@@ -12,8 +12,7 @@ Please be aware of GitHub's policies and guidelines, and use this repository res
 
 By accessing or using this repository, you acknowledge and agree to the terms mentioned above. 🤝
 
--__________________________________________________________________________________________________________
-・🚧・Educational purpose only ・🚧・We are NOT responsible for any DAMAGE that your window may receive
+__________________________________________________________________________________________________________
 
 Note:  The optimizer code is scripted but you can freely modify the design and it has the buttons to send the requests to optimize
 
